@@ -55,15 +55,15 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     if (response.ok) {
       status.innerHTML = `
   <div class="ember-container">
-    <p class="ember-text">✅ Message Sent Successfully</p>
+    <p class="ember-text"> Message Sent Successfully</p>
     <div class="chains"></div>
   </div>`;
       form.reset();
     } else {
-      status.innerHTML = "❌ Oops! There was a problem.";
+      status.innerHTML = " Oops! There was a problem.";
     }
   }).catch(error => {
-    status.innerHTML = "❌ Network error. Try again later.";
+    status.innerHTML = " Network error. Try again later.";
   });
 });
 </script>
