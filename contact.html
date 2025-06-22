@@ -53,7 +53,11 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "✅ Your message has been sent!";
+      status.innerHTML = `
+  <div class="ember-container">
+    <p class="ember-text">✅ Message Sent Successfully</p>
+    <div class="chains"></div>
+  </div>`;
       form.reset();
     } else {
       status.innerHTML = "❌ Oops! There was a problem.";
