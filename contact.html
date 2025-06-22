@@ -23,17 +23,47 @@
       <h2>Contact Me</h2>
       <p>For inquiries, collaborations, or just to say hi, fill out the form below:</p>
 
-      <form action="https://formspree.io/f/xnnvgazr" method="POST">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+<form id="contact-form">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="_replyto" required><br><br>
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="6" required></textarea><br><br>
 
-        <button type="submit">Send</button>
+  <button type="submit">Send</button>
+</form>
+
+<p id="form-status" style="margin-top: 1rem;"></p>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = new FormData(form);
+  const status = document.getElementById("form-status");
+
+  fetch("https://formspree.io/f/YOUR_FORM_ID", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "✅ Your message has been sent!";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Oops! There was a problem.";
+    }
+  }).catch(error => {
+    status.innerHTML = "❌ Network error. Try again later.";
+  });
+});
+</script>
+
       </form>
     </section>
   </main>
