@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -7,80 +7,173 @@
 
 body {
   background-color: #121212;
-  color: #ddd;
+  color: #e0dcdc;
   font-family: 'IM Fell English', serif;
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Header */
 header {
-  background-color: #1b1b1b;
-  padding: 1.5rem;
+  background-color: #1a1a1a;
+  padding: 2rem 1rem;
   text-align: center;
-  border-bottom: 2px solid #4b0000;
+  border-bottom: 3px solid #6b0000;
 }
 
 header h1 {
   font-family: 'UnifrakturCook', cursive;
-  font-size: 3rem;
-  color: #aa0000;
+  font-size: 3.5rem;
+  color: #b22222;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  user-select: none;
+}
+
+/* Navbar */
+.navbar {
+  margin-top: 1rem;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 2.5rem;
+}
+
+.navbar li {
+  position: relative;
 }
 
 .navbar a {
-  color: #ccc;
+  color: #c8bfbf;
   text-decoration: none;
   font-weight: 700;
   font-family: 'IM Fell English', serif;
-  font-size: 1.1rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
+  font-size: 1.2rem;
+  padding: 0.25rem 0;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 .navbar a:hover,
 .navbar a[aria-current="page"] {
-  color: #ff4b4b;
-  border-bottom-color: #ff4b4b;
+  color: #ff4c4c;
+  border-bottom-color: #ff4c4c;
+  cursor: pointer;
 }
 
+/* Main content */
 main {
   flex: 1;
-  max-width: 800px;
+  max-width: 900px;
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   text-align: center;
 }
 
-.intro h2 {
+/* Headings */
+h2 {
   font-family: 'UnifrakturCook', cursive;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #bb2222;
+  user-select: none;
 }
 
-.intro p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
+/* Paragraphs */
+p {
+  font-size: 1.15rem;
   color: #ddd;
+  margin-bottom: 2rem;
 }
 
-footer {
-  background-color: #1b1b1b;
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 2px solid #4b0000;
-  color: #666;
-  font-size: 0.9rem;
+/* Form styles */
+form {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  text-align: left;
 }
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #d1c9c9;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #3a2c2c;
+  border-radius: 6px;
+  background-color: #1f1f1f;
+  color: #eee;
+  font-family: 'IM Fell English', serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #b22222;
+  outline: none;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button */
+button {
+  background-color: #6b0000;
+  color: #eee;
+  font-family: 'IM Fell English', serif;
+  font-weight: 700;
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #a52a2a;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  border-top: 3px solid #6b0000;
+  padding: 1.5rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Links inside main */
+main a {
+  color: #bb2222;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+main a:hover,
+main a:focus {
+  color: #ff4c4c;
+  outline: none;
+}
+
