@@ -1,94 +1,102 @@
 body {
   margin: 0;
-  padding: 0;
-  background: #0c0c0c;
-  color: #ccc;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 16px;
-  cursor: crosshair;
-}
-
-.entry-screen {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  color: black;
-  font-family: 'DotGothic16', monospace;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  cursor: pointer;
-  text-align: center;
-  padding: 2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.5s ease;
+  background-color: #111;
+  color: #eee;
+  font-family: 'IM Fell English', serif;
 }
 
 header {
+  background-color: #000;
   border-bottom: 2px solid crimson;
   text-align: center;
-  padding: 1rem 0;
-  font-family: 'DotGothic16', monospace;
-  font-size: 2rem;
-  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.5rem;
+  color: #ccc;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   background: #111;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
+.navbar li {
   margin: 0;
-  list-style: none;
-  background: #0c0c0c;
+  border-right: 1px solid #333;
 }
 
-nav a {
-  text-decoration: none;
-  color: crimson;
-  font-size: 1.5rem;
-  padding: 0.5rem;
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar a {
   display: block;
+  padding: 1rem;
+  text-decoration: underline;
+  color: crimson;
+  font-weight: bold;
+  font-family: 'IM Fell English', serif;
+  font-size: 1rem;
 }
 
-nav a:hover {
-  background: crimson;
-  color: black;
+.navbar a:hover {
+  background-color: crimson;
+  color: #000;
+  text-decoration: none;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  height: 80vh;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
 }
 
-.block-left,
-.block-right {
+.block {
   padding: 2rem;
-  border: 1px solid #444;
-  background: #111;
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+  background: #0a0a0a;
 }
 
-.block-left h2,
-.block-right h2 {
-  font-family: 'DotGothic16', monospace;
-  color: white;
+.left {
+  border-right: 1px solid #555;
+}
+
+.right {
+  border-left: 1px solid #555;
+}
+
+h2 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
   border-bottom: 1px solid crimson;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
 }
 
 footer {
   text-align: center;
-  font-size: 0.8rem;
-  color: #666;
   padding: 1rem;
+  font-size: 0.9rem;
   border-top: 1px solid #333;
-  font-family: monospace;
+  color: #777;
+  background: #000;
 }
