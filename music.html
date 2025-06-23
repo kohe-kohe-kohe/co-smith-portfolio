@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+</head>
+<body style="margin:0; background:#000;">
+
+<audio id="player" autoplay loop></audio>
+
+<script>
+  const songs = [
+    "audio/skull1.mp3",
+    "audio/skull2.mp3",
+    "audio/skull3.mp3"
+  ];
+
+  // Pick a random song
+  const randomSong = songs[Math.floor(Math.random() * songs.length)];
+  const audio = document.getElementById("player");
+  audio.src = randomSong;
+  audio.volume = 0.6;
+
+  // User click to allow autoplay (some browsers need this)
+  document.body.addEventListener("click", () => audio.play(), { once: true });
+</script>
+</body>
+</html>
