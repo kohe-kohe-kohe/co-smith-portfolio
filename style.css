@@ -1,102 +1,86 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  background-color: #111;
-  color: #eee;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ddd;
   font-family: 'IM Fell English', serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  background-color: #000;
-  border-bottom: 2px solid crimson;
+  background-color: #1b1b1b;
+  padding: 1.5rem;
   text-align: center;
-  padding: 1rem;
+  border-bottom: 2px solid #4b0000;
 }
 
 header h1 {
   font-family: 'UnifrakturCook', cursive;
-  font-size: 2.5rem;
-  color: #ccc;
-  text-transform: lowercase;
-  letter-spacing: 2px;
+  font-size: 3rem;
+  color: #aa0000;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .navbar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  background: #111;
-}
-
-.navbar li {
-  margin: 0;
-  border-right: 1px solid #333;
-}
-
-.navbar li:last-child {
-  border-right: none;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .navbar a {
-  display: block;
-  padding: 1rem;
-  text-decoration: underline;
-  color: crimson;
-  font-weight: bold;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 700;
   font-family: 'IM Fell English', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
 }
 
-.navbar a:hover {
-  background-color: crimson;
-  color: #000;
-  text-decoration: none;
+.navbar a:hover,
+.navbar a[aria-current="page"] {
+  color: #ff4b4b;
+  border-bottom-color: #ff4b4b;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-top: 2px solid #222;
-  border-bottom: 2px solid #222;
+  flex: 1;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
-.block {
-  padding: 2rem;
-  border-right: 1px solid #333;
-  border-left: 1px solid #333;
-  background: #0a0a0a;
-}
-
-.left {
-  border-right: 1px solid #555;
-}
-
-.right {
-  border-left: 1px solid #555;
-}
-
-h2 {
+.intro h2 {
   font-family: 'UnifrakturCook', cursive;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid crimson;
-  padding-bottom: 0.5rem;
-  text-transform: uppercase;
+  color: #bb2222;
 }
 
-ul {
-  list-style: square;
-  padding-left: 1.5rem;
+.intro p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ddd;
 }
 
 footer {
+  background-color: #1b1b1b;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
+  border-top: 2px solid #4b0000;
+  color: #666;
   font-size: 0.9rem;
-  border-top: 1px solid #333;
-  color: #777;
-  background: #000;
 }
