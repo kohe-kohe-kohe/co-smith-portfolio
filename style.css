@@ -113,7 +113,7 @@ button {
 button:hover {
   background-color: #666;
 }
- /* Main nav bar */
+/* Main nav bar */
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -160,4 +160,4 @@ button:hover {
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} 
